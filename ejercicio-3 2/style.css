@@ -1,0 +1,116 @@
+/*INDICE DE ESTILOS
+
+0.Generales
+1.Tipografías
+2.Header/cabecera
+3.Enlaces/Botones
+4.Areas destacadas
+*/
+
+/*0.Generales -colores*/
+*{
+    margin:0;
+    padding 0;
+    box-sizing: border-box;
+}
+
+:root   {
+
+    --color-principal: rgb(11, 25, 110);
+    --color-acento: rgb(80, 42, 142);
+    --color-tercer: rgb(81, 126, 194);
+    --color-parrafo: rgb(22, 21, 26);
+}
+
+.elements-row  {
+    display: flex;
+}
+
+/*1. Tipografías*/
+
+.titulo-principal   {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 28px;
+  color: var(--color-principal);
+}
+.titulo-secundario  {
+    font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  color: var(--color-acento);
+}
+
+.parrafo    {
+    font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: var(--color-parrafo);
+}
+.texto-oculto   {
+    display: none;
+}
+
+/* 2. Header/cabecera*/
+#cabecera-principal {
+    
+    padding: 20px 2% 20px 2%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid var(--color-principal);
+
+}
+
+
+    
+/* 3. Enlaces / Botones*/
+.boton-principal {
+    /*fuente*/
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  color: var(--color-principal);
+  /*quito la linea inferior*/
+  text-decoration: none;
+  /*asigno cuerpo medio del relleno*/
+  padding: 8px 15px 8px 15px;
+  border-radius: 3px;
+
+}
+
+.boton-principal:hover  {
+    color: rgb(255, 255, 255);
+    background-color: var(--color-principal);
+    /*animo el paso del mouse*/
+    transition: all linear 0.3s;
+}
+
+
+@media only screen and (max-width: 600px)  {
+
+    #cabecera-principal{
+        flex-direction: column;
+    }
+    nav[role=navigation]    {
+        width: 100%;
+    }
+    .boton-principal    {
+        display: block;
+        width: 96%;
+        margin: 5px 2% 0 2%;
+        text-align: center;
+        border-bottom: 1px var(--color-principal);
+        border-radius: 0;
+    }
+}
+
+/*areas destacadas*/
+#areas-destacadas div(
+        
+)
