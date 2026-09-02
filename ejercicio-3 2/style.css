@@ -5,14 +5,26 @@
 2.Header/cabecera
 3.Enlaces/Botones
 4.Areas destacadas
+5.Area experiencia
 */
 
 /*0.Generales -colores*/
 *{
     margin:0;
-    padding 0;
+    padding: 0;
     box-sizing: border-box;
 }
+
+img{
+    width: 100%;
+
+}
+
+.elements-row   {
+    display: flex;
+    justify-content: space-around;
+}
+
 
 :root   {
 
@@ -22,9 +34,7 @@
     --color-parrafo: rgb(22, 21, 26);
 }
 
-.elements-row  {
-    display: flex;
-}
+
 
 /*1. Tipografías*/
 
@@ -34,6 +44,8 @@
   font-style: normal;
   font-size: 28px;
   color: var(--color-principal);
+  text-align: center;
+
 }
 .titulo-secundario  {
     font-family: "Lato", sans-serif;
@@ -92,7 +104,72 @@
 }
 
 
+
+/*areas destacadas*/
+#areas-destacadas{
+    padding: 30px 0;
+}
+
+.articulo-index {
+    padding: 20px;
+
+}
+
+.articulo-index *{
+margin: 0 0 10px 0;
+}
+
+.boton-ver-mas{   
+font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  color: var(--color-principal); 
+  text-decoration: none;
+  padding: 6px 10px 6px 10px;
+  border-radius: 3px;
+  padding: 6px 10px 6px 0;
+  transition: all linear 0.3s;
+}
+
+
+.boton-ver-mas:hover    {
+    color: white;
+    background-color: var(--color-principal);
+    padding: 6px 10px 6px 10px;
+}
+
+/*area experiemcias*/
+#area-experiencia{
+    padding: 100px 0;
+    background: url(assets/fondo-video.jpg) center center no-repeat rgba(0, 0, 0);
+    background-size: cover;
+}
+
+#area-experiencia video {
+    margin: 30px 5%;
+}
+
+
+.titulo-principal2   {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 28px;
+  color: white;
+  text-align: center;
+  padding: 20px;
+
+}
+
 @media only screen and (max-width: 600px)  {
+
+.elements-row  {
+    flex-direction: column;
+    align-items: center;
+    
+    }
+
 
     #cabecera-principal{
         flex-direction: column;
@@ -109,8 +186,3 @@
         border-radius: 0;
     }
 }
-
-/*areas destacadas*/
-#areas-destacadas div(
-        
-)
