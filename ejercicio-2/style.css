@@ -1,0 +1,58 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body    {
+    background: url(Assets/imagen-back.jpg) 0 0 no-repeat;
+    background-size: cover;
+
+}
+
+main    {
+    background: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto 0 auto;
+    padding: 10px;
+}
+
+
+h1  {
+color: rgb(255, 0, 140);
+font-size: 34px;
+ font-family: "Lacquer", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+h2  {
+    color: rgb(219, 243, 80);
+    font-size: 28px;
+    font-family: "Lacquer", system-ui;
+    font-weight: 400;
+    font-style: normal;
+     font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+}
+
+.parrafo-pink   {
+    color: rgb(218, 234, 249);
+    font-size: 16px;
+    line-height: 24px;
+    text-align: justify;
+    font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  margin: 10px 0 10px 0;
+
+}
+
+img {
+    width: 100%;
+}
