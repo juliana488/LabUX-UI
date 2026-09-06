@@ -1,0 +1,367 @@
+
+/* 1. Variables de Color y Diseño */
+:root {
+  --fondo-azul-profundo: #050d1a;       
+  --fondo-tarjeta-cristal: rgba(10, 25, 47, 0.75); /* Cristal azul translúcido */
+  --turquesa-principal: #00e5ff;        /* Turquesa mar brillante */
+  --cian-acento: #48dbfb;               /* Azul cian caribeño */
+  --azul-oceano: #0a3d62;               /* Azul océano profundo */
+  --texto-blanco: #ffffff;              /* Texto principal */
+  --texto-secundario: #a0aec0;          /* Texto secundario suave */
+  --resplandor-turquesa: rgba(0, 229, 255, 0.3); /* Resplandor neón */
+  --borde-cristal: rgba(0, 229, 255, 0.2);       
+  --fuente-principal: 'Plus Jakarta Sans', sans-serif;
+  --transicion-suave: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 2. Reinicio y Estilos Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--fondo-azul-profundo);
+  color: var(--texto-blanco);
+  font-family: var(--fuente-principal);
+  line-height: 1.6;
+  overflow-x: hidden;
+  padding-top: 90px; 
+}
+
+/* 3. Barra de Navegación */
+.barra-navegacion {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  z-index: 1000;
+  background: rgba(5, 13, 26, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--borde-cristal);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.enlace-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: var(--transicion-suave);
+}
+
+.enlace-logo:hover {
+  transform: scale(1.05);
+}
+
+.imagen-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--turquesa-principal);
+}
+
+.enlaces-navegacion {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.item-navegacion {
+  color: var(--texto-secundario);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: var(--transicion-suave);
+}
+
+.item-navegacion:hover {
+  color: var(--turquesa-principal);
+  text-shadow: 0 0 10px var(--resplandor-turquesa);
+}
+
+.boton-contacto {
+  padding: 10px 24px;
+  background: linear-gradient(135deg, var(--turquesa-principal), var(--azul-oceano));
+  color: var(--texto-blanco);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px var(--resplandor-turquesa);
+}
+
+.boton-contacto:hover {
+  color: var(--texto-blanco);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 229, 255, 0.5);
+}
+
+/* 4. Contenedor Principal y Título */
+.contenedor-principal {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px 20px 60px;
+}
+
+.titulo-principal {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 40px 0 60px;
+  background: linear-gradient(135deg, #ffffff 30%, var(--cian-acento) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* 5. Secciones de Contenido General */
+.seccion-contenido {
+  margin-bottom: 80px;
+}
+
+.titulo-seccion {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 45px;
+  color: var(--texto-blanco);
+  position: relative;
+}
+
+/* 6.Tarjetas */
+.cuadricula-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.cuadricula-3-columnas {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* 7. Diseño de Tarjetas */
+.tarjeta {
+  background: var(--fondo-tarjeta-cristal);
+  border: 1px solid var(--borde-cristal);
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transicion-suave);
+}
+
+.tarjeta:hover {
+  transform: translateY(-10px);
+  border-color: var(--turquesa-principal);
+  box-shadow: 0 15px 35px var(--resplandor-turquesa);
+}
+
+.contenedor-imagen-tarjeta {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+}
+
+.imagen-tarjeta {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.tarjeta:hover .imagen-tarjeta {
+  transform: scale(1.08);
+}
+
+.contenido-tarjeta {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.contenido-tarjeta h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--cian-acento);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.contenido-tarjeta p {
+  color: var(--texto-secundario);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.boton-tarjeta {
+  align-self: flex-start;
+  padding: 10px 22px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--turquesa-principal);
+  border: 1px solid var(--turquesa-principal);
+  border-radius: 25px;
+  text-decoration: none;
+  background: rgba(0, 229, 255, 0.05);
+  transition: var(--transicion-suave);
+}
+
+.boton-tarjeta:hover {
+  background: var(--turquesa-principal);
+  color: var(--fondo-azul-profundo);
+  box-shadow: 0 0 15px var(--resplandor-turquesa);
+}
+
+.tarjeta-destacada .contenido-tarjeta {
+  padding: 20px;
+}
+
+/* 8. Sección de Video*/
+.seccion-video {
+  text-align: center;
+}
+
+.contenedor-video {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--turquesa-principal);
+  background: #000;
+}
+
+.video-airpano {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* 9. Sección del Mapa */
+.contenedor-mapa {
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--borde-cristal);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.mapa-airpano {
+  width: 100%;
+  display: block;
+  filter: saturate(1.2) contrast(1.1); /* Realza los tonos azules en el mapa */
+}
+
+/* 10. Pie de Página (Footer) */
+.pie-pagina {
+  background: #02060e;
+  border-top: 1px solid var(--borde-cristal);
+  padding: 60px 5% 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.marca-pie-pagina {
+  display: flex;
+  align-items: center;
+}
+
+.logo-pie-pagina {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--turquesa-principal);
+}
+
+.cuadricula-enlaces-pie {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.navegacion-pie h3 {
+  color: var(--cian-acento);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+
+.navegacion-pie ul {
+  list-style: none;
+}
+
+.navegacion-pie li {
+  margin-bottom: 10px;
+}
+
+.navegacion-pie a {
+  color: var(--texto-secundario);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transicion-suave);
+}
+
+.navegacion-pie a:hover {
+  color: var(--turquesa-principal);
+  padding-left: 5px;
+}
+
+/* 11. Adaptabilidad */
+@media (max-width: 868px) {
+  .barra-navegacion {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 5%;
+    gap: 15px;
+  }
+  
+  body {
+    padding-top: 140px;
+  }
+
+  .enlaces-navegacion {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .titulo-principal {
+    font-size: 2rem;
+  }
+
+  .titulo-seccion {
+    font-size: 1.6rem;
+  }
+
+  .pie-pagina {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cuadricula-enlaces-pie {
+    justify-content: center;
+    gap: 30px;
+  }
+}
